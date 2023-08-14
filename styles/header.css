@@ -1,0 +1,145 @@
+.menu-btn {
+  width: 30px;
+  height: 30px;
+  position: relative;
+  z-index: 2;
+  display: none;
+  overflow: hidden;
+}
+.menu-btn span {
+  width: 20px;
+  height: 2px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #222222;
+  transition: all 0.5s;
+}
+.menu-btn span:nth-of-type(2) {
+  top: calc(50% - 5px);
+}
+.menu-btn span:nth-of-type(3) {
+  top: calc(50% + 5px);
+}
+.menu-burger {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  background: #fff;
+  transform: translateX(-100%);
+  transition: transform 0.5s;
+}
+
+.nav-link {
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  height: 100%; /* Ensure the nav-link takes full height of the parent li */
+  width: 100%; /* Ensure the nav-link takes full width of the parent li */
+}
+.menu-burger.active {
+  transform: translateX(0);
+}
+.menu-burger li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+  height: 60px; /* Set a fixed height for each li */
+}
+/* Changing the burger icon when the menu is open */
+.menu-btn.active span:nth-of-type(1) {
+  display: none;
+}
+.menu-btn.active span:nth-of-type(2) {
+  top: 50%;
+  transform: translate(-50%, 0%) rotate(45deg);
+}
+.menu-btn.active span:nth-of-type(3) {
+  top: 50%;
+  transform: translate(-50%, 0%) rotate(-45deg);
+}
+
+.header__container {
+  display: flex;
+  min-height: 80px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__logo {
+  display: flex;
+  align-items: center;
+  margin-right: 5px;
+}
+.header__logo img {
+  width: 20px;
+  margin-right: 7px;
+}
+.header__logo span {
+  font-weight: 500;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+}
+
+.menu__list {
+  display: flex;
+  gap: 40px;
+}
+
+.menu__item {
+}
+
+.menu__link {
+  color: #4f5665;
+  font-size: 15px;
+}
+
+.nav__buttons {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+.nav__btn-SignIn {
+  font-weight: 500;
+}
+
+.nav__btn-SignUp {
+  font-weight: 500;
+  color: #f53855;
+  border-radius: 50px;
+  padding: 15px 30px 15px 30px;
+  border: 0.47px solid #f53855;
+  transition: 0.3s all ease-in-out;
+}
+.nav__btn-SignUp:hover {
+  color: #fff;
+  background-color: #f53855;
+}
+
+@media (max-width: 800px) {
+  .menu__list {
+    display: none;
+  }
+  .menu-btn {
+    display: block;
+  }
+  .menu-burger {
+    display: flex;
+  }
+  .nav__buttons {
+    display: none;
+  }
+}

@@ -1,0 +1,36 @@
+@import url(/LaslessVPN/styles/reset.css);
+@import url(/LaslessVPN/styles/header.css);
+@import url(/LaslessVPN/styles/started.css);
+@import url(/LaslessVPN/styles/analytics.css);
+@import url(/LaslessVPN/styles/provide.css);
+@import url(/LaslessVPN/styles/plan.css);
+@import url(/LaslessVPN/styles/comments.css);
+@import url(/LaslessVPN/styles/features.css);
+@import url(/LaslessVPN/styles/lastes.css);
+
+body {
+  font-family: 'Rubik';
+}
+.wrapper {
+  min-height: 100%;
+  overflow: clip;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ------ */
+
+.page {
+  flex: 1 1 auto;
+}
+
+/* ------ */
+
+[class*="__container"] {
+  max-width: 1280px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin: 0 auto;
+}
+
+/* ------ */
